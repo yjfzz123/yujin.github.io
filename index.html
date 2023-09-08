@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <link rel="stylesheet" href="assets/style.css">
+    <title>选择方案</title>
 </head>
-    <h1>请选择是否需要特典</h1>
-    <form action = "solution.html" method = "get">
-        <input type="ratio" name = "solution" value = "无特典"> 无特典
-        <input type="ratio" name = "solution" value = "星船特典"> 星船特典
-        <input tyep="ratio" name = "solution" value = "平台特典"> 平台特典
-        
-    </form>
-        
 <body>
-    
+    <h1>请选择一个方案：</h1>
+    <form action="solutions.html" method="get">
+        <label><input type="radio" name="solution" value="无特典"> 无特典</label><br>
+        <label><input type="radio" name="solution" value="星船特典"> 星船特典</label><br>
+        <label><input type="radio" name="solution" value="平台特典"> 平台特典</label><br>
+        <!-- 添加更多方案选项 -->
+        <input type="submit" value="查看方案">
+    </form>
 </body>
 </html>
