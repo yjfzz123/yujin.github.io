@@ -19,7 +19,7 @@
 
         const resultContent = document.getElementById('result-content');
 
-        if (needBonus === '需要'){
+        if (needBonus === '不需要'){
             if(needPL === '需要'){
                 resultContent.innerHTML = `
                     <p>您的选择是:</p>
@@ -37,7 +37,7 @@
             else{
                 resultContent.innerHTML = `
                     <p>您的选择是:</p>
-                    <p>${needBonus} 特典 ${needPL} pb无特版orL无特版</p>
+                    <p>${needBonus}特典 ${needPL} pb无特版orL无特版</p>
                     <p>根据您的选择,提供以下购买链接和方法</p>
                     <p> 1.熊宝 </p>
                     <a href="https://shop881578129.v.weidian.com/item.html?itemID=6594390518">熊宝</a>
@@ -45,10 +45,10 @@
                     <p><a href="http://m.liveonepick.com/#/?productId=d8736ab923d54f92a9ce87147b17ebfa&continueFlag=fd086b40aa10f25ce8683c6343b24a2e">SR D版随机 </a></p>
                     <p><a href="http://m.liveonepick.com/#/?productId=d03289999c0b4a73bfbf930d551417e0&continueFlag=fd086b40aa10f25ce8683c6343b24a2e">SR PLVE版随机 </a></p>
                     <p> 3.K4 </p>
-                    <p><a href="https://cn.ktown4u.com/iteminfo?grp_no=10460817&fanc_goods_no=261263&goods_no=99928" K4 D版随机</a></p>
-                    <p><a href="https://cn.ktown4u.com/iteminfo?grp_no=10460817&fanc_goods_no=261368&goods_no=99933" K4 D版指定安宥真单封</a></p>
-                    <p><a href="https://cn.ktown4u.com/iteminfo?grp_no=10460817&fanc_goods_no=261283&goods_no=99940" K4 D版set(含一整套单封)</a></p>
-                    <p><a href="https://cn.ktown4u.com/iteminfo?grp_no=10460817&fanc_goods_no=261262&goods_no=99941" K4 PLVE版</a></p>
+                    <p><a href="https://cn.ktown4u.com/iteminfo?grp_no=10460817&fanc_goods_no=261263&goods_no=99928">K4 D版随机</a></p>
+                    <p><a href="https://cn.ktown4u.com/iteminfo?grp_no=10460817&fanc_goods_no=261368&goods_no=99933">K4 D版指定安宥真单封</a></p>
+                    <p><a href="https://cn.ktown4u.com/iteminfo?grp_no=10460817&fanc_goods_no=261283&goods_no=99940">K4 D版set(含一整套单封)</a></p>
+                    <p><a href="https://cn.ktown4u.com/iteminfo?grp_no=10460817&fanc_goods_no=261262&goods_no=99941">K4 PLVE版</a></p>
                     
                 `;  
             }
@@ -58,7 +58,7 @@
                 if (StarshitPlatform ==='set'){
                     resultContent.innerHTML=`
                         <p>您的选择是:</p>
-                        <p>${needBonus} 特典,特典平台为 ${bonusPlatform},特典形式为 ${StarshitPlatform} </p>
+                        <p>${needBonus}特典,特典平台为 ${bonusPlatform},特典形式为 ${StarshitPlatform} </p>
                         <p>根据您的选择,提供以下购买链接和方法</p>
                         <p>1.6+3set版,包含6张一套的单封版本以及3张一套的pb版本,小卡分9张,包括一套6张单人卡和一套3张团卡</p>
                         <p><a href="https://www.yetimall.fun/h5/#/pages/store/goodsDetail/goodsDetail?gid=7693&continueFlag=fd086b40aa10f25ce8683c6343b24a2e">YetiMall </a></p>
@@ -77,7 +77,7 @@
                 }else{
                     resultContent.innerHTML=`
                         <p>您的选择是:</p>
-                        <p>${needBonus} 特典,特典平台为 ${bonusPlatform},特典形式为 ${StarshitPlatform} </p>
+                        <p>${needBonus}特典,特典平台为 ${bonusPlatform},特典形式为 ${StarshitPlatform} </p>
                         <p>根据您的选择,提供以下购买链接和方法</p>
                         <p>DIGPACK版(单封版):</p>
                         <p>1.可指定安宥真单封，不拆卡为随机特典，买六张可凑齐一套特典</p>
@@ -116,7 +116,7 @@
             }
             else if(bonusPlatform === 'K4'){
                 resultContent.innerHTML=`
-                    <p>${needBonus} 特典,特典平台为 ${bonusPlatform}</p>
+                    <p>${needBonus}特典,特典平台为 ${bonusPlatform}</p>
                     <p><K4特典皆为6随1></p>
                     <p>PB版+L版 4随1</p>
                     <a href="https://cn.ktown4u.com/iteminfo?grp_no=10460817&fanc_goods_no=261264&goods_no=99932"> K4随机</a>
@@ -129,7 +129,7 @@
             }
             else if(bonusPlatform === 'SW'){
                 resultContent.innerHTML=`
-                    <p>${needBonus} 特典,特典平台为 ${bonusPlatform}</p>
+                    <p>${needBonus}特典,特典平台为 ${bonusPlatform}</p>
                     <p><SW特典皆为6随1，专辑为4随1></p>
                     <p><a href="https://www.yetimall.fun/h5/#/pages/store/goodsDetail/goodsDetail?gid=7671&continueFlag=cbfae1f120486ca7f05fd541aa2d3891">YetiMall->SWx1</a></p>
                     <p><a href="https://www.nanyiglobal.com/2309ivepo-1">楠艺->SW特典 </a></p>
@@ -140,7 +140,7 @@
             }
             else if(bonusPlatform ==='WM'){
                 resultContent.innerHTML=`
-                    <p>${needBonus} 特典,特典平台为 ${bonusPlatform}</p>
+                    <p>${needBonus}特典,特典平台为 ${bonusPlatform}</p>
                     <p><WM特典皆为6随1，专辑为4随1></p>
                     <p><a href="https://www.yetimall.fun/h5/#/pages/store/goodsDetail/goodsDetail?gid=7671&continueFlag=cbfae1f120486ca7f05fd541aa2d3891">YetiMall->WMx1</a></p>
                     <p><a href="https://www.nanyiglobal.com/2309ivepo-1">楠艺->WM特典 </a></p>
@@ -151,7 +151,7 @@
             }
             else if(bonusPlatform ==='KAKAO'){
                 resultContent.innerHTML=`
-                    <p>${needBonus} 特典,特典平台为 ${bonusPlatform}</p>
+                    <p>${needBonus}特典,特典平台为 ${bonusPlatform}</p>
                     <p><KAKAO特典皆为6随1，专辑为4随1></p>
                     <p><a href="https://www.yetimall.fun/h5/#/pages/store/goodsDetail/goodsDetail?gid=7671&continueFlag=cbfae1f120486ca7f05fd541aa2d3891">YetiMall->KAKAOx1</a></p>
                     <p><a href="https://www.nanyiglobal.com/2309ivepo-1">楠艺->KAKAO特典 </a></p>
@@ -159,7 +159,7 @@
             }
             else if(bonusPlatform ==='NY'){
                 resultContent.innerHTML=`
-                    <p>${needBonus} 特典,特典平台为 ${bonusPlatform}</p>
+                    <p>${needBonus}特典,特典平台为 ${bonusPlatform}</p>
                     <p><楠艺特典皆为6随1，专辑为4随1></p>
                     <p><a href="https://www.nanyiglobal.com/2309ivenypol-1">楠艺低价</a></p>
                     <p><a href="https://www.nanyiglobal.com/2309ivenypo-1">楠艺</a></p>
@@ -167,7 +167,7 @@
             }
             else if(bonusPlatform ==='爱豆驿站'){
                 resultContent.innerHTML=`
-                    <p>${needBonus} 特典,特典平台为 ${bonusPlatform}</p>
+                    <p>${needBonus}特典,特典平台为 ${bonusPlatform}</p>
                     <p><爱豆驿站6张set除一套特典卡外送一张安宥真特典卡></p>
                     <a href="https://shop1723959802.v.weidian.com/item.html?itemID=6602929670">爱豆驿站</a>
                     `;
