@@ -59,8 +59,8 @@
         function redirectToResultPage(){
 
             const needBonus = document.querySelector('input[name="need_bonus"]:checked').value?document.querySelector('input[name="need_bonus"]:checked').value: '默认值';
-            const needPL = document.querySelector('input[name="need_PL"]:checked').value?document.querySelector('input[name="need_PL"]:checked'):'默认';
-            const BonusPlatform = document.querySelector('input[name="bonus_platform"]:checked').value?document.querySelector('input[name="bonus_platform"]:checked'):"默认";
+            const needPL = document.querySelector('input[name="need_PL"]:checked').value?document.querySelector('input[name="need_PL"]:checked').value:'默认';
+            const BonusPlatform = document.querySelector('input[name="bonus_platform"]:checked').value?document.querySelector('input[name="bonus_platform"]:checked').value:"默认";
             const StarshitPlatform = document.querySelector('input[name="starship_platform"]:checked').value?document.querySelector('input[name="starship_platform"]:checked').value:"默认";
             const resultPageURL = `result.html?need_bonus=${needBonus}&need_PL=${needPL}&bonus_platform=${BonusPlatform}&starship_platform=${StarshitPlatform}`;
             window.location.href = resultPageURL;
