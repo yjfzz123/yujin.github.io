@@ -61,7 +61,7 @@
             const needPL = document.querySelector('input[name="need_PL"]:checked').value;
             const BonusPlatform = document.querySelector('input[name="bonus_platform"]:checked').value;
             const StarshitPlatform = document.querySelector('input[name="starship_platform"]:checked').value;
-            const resultPageURL = `/solutions/result.html?need_bonus=${needBonus}&need_PL=${needPL}&bonus_platform=${BonusPlatform}&starship_platform=${StarshitPlatform}`;
+            const resultPageURL = `result.html?need_bonus=${needBonus}&need_PL=${needPL}&bonus_platform=${BonusPlatform}&starship_platform=${StarshitPlatform}`;
             window.location.href = resultPageURL;
         }
         const needBonusInputs = document.querySelectorAll('input[name="need_bonus"]');
