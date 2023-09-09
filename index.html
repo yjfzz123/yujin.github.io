@@ -36,11 +36,12 @@
                 <label><input type="radio" name="starship_platform" value="set">set</label><br>
                 <label><input type="radio" name="starship_platform" value="随机">随机</label><br>
         </div>
+
         <div id = "submit-button" style = "display: none;">
             <input type = "submit" value = "提交">
         </div>
     </form>
-    
+
     <script>
         // 获取问题元素和结果元素
         const selectionForm = document.getElementById('selection-form')
@@ -63,7 +64,7 @@
             const resultPageURL = `result.html?need_bonus=${needBonus}&need_PL=${needPL}&bonus_platform=${BonusPlatform}&starship_platform=${StarshitPlatform}`;
             window.location.href = resultPageURL;
         }
-        const needBounusInputs = document.querySelectorAll('input[name="need_bonus"]');
+        const needBonusInputs = document.querySelectorAll('input[name="need_bonus"]');
         const needPLInputs = document.querySelectorAll('input[name="need_PL"]');
         const BonusPlatformInputs = document.querySelectorAll('input[name="bonus_platform"]');
         const StarshitPlatformInputs = document.querySelectorAll('input[name="starship_platform"]');
@@ -74,6 +75,7 @@
                     question3.style.display = 'block';
                 } else {
                     question2.style.display = 'block';
+                    submitButton.style.display = 'block';
                 }
             });
         });
