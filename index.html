@@ -72,29 +72,33 @@
         needBonusInputs.forEach(input => {
             input.addEventListener('change', () => {
                 if (input.value === '需要') {
+                    question2.style.display = 'none'
+                    question4.style.display = 'none'
                     question3.style.display = 'block';
                 } else {
+                    question3.style.display = 'none'
+                    question4.style.display = 'none'
                     question2.style.display = 'block';
-                    submitButton.style.display = 'block';
                 }
             });
         });
 
         needPLInputs.forEach(input => {
             input.addEventListener('change', () => {
-                question3.style.display = 'none';
-                question4.style.display = 'none';
                 submitButton.style.display = 'block';
+                question3.style.display = 'none';
+                question4.style.display = 'none'; 
             });
         });
 
         BonusPlatformInputs.forEach(input => {
             input.addEventListener('change', () => {
                 if (input.value === '星船') {
+                    submitButton.style.display = 'none';
                     question4.style.display = 'block';
                 } else {
-                    question4.style.display = 'none';
                     submitButton.style.display = 'block';
+                    question4.style.display = 'none';
                 }
             });
         });
