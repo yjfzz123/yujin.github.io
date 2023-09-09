@@ -3,71 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>多层级问题和选项</title>
+    <title>购专指导</title>
 </head>
 <body>
-    <h1>问题1：是否需要特典？</h1>
-    <label><input type="radio" name="need_bonus" value="需要"> 需要</label><br>
-    <label><input type="radio" name="need_bonus" value="不需要"> 不需要</label><br>
+    <h1>选择方案</h1>
+    <form id = "selection-form">
+        <div id ="question1">
+            <h2>是否需要特典？</h2>
+            <label><input type="radio" name="need_bonus" value="需要"> 需要</label><br>
+            <label><input type="radio" name="need_bonus" value="不需要"> 不需要</label><br>
+        </div>
+
+
+        <div id = "question2" style="display: none;">
+            <h2>不需要特典的情况下，需不需要PB版(普通版)/LOVEDIVE版无特典专辑</h2>
+                <label><input type="radio" name="need_PL" value="需要"> 需要</label><br>
+                <label><input type="radio" name="need_PL" value="不需要"> 不需要</label><br>
+        </div>
+
+        <div id = "question3" style = "display: none;">
+            <h2>选择哪个平台的特典(除星船特外其余平台特典都为购买PB版+L版赠送，专辑均为四版本随机一版，set购买会出现除四版本一套外的两张随机版本专辑)</h2>
+                <label><input type="radio" name="bonus_platform" value="星船">星船</label><br>
+                <label><input type="radio" name="bonus_platform" value="KAKAO">KAKAO</label><br>
+                <label><input type="radio" name="bonus_platform" value="SW">SW</label><br>
+                <label><input type="radio" name="bonus_platform" value="WM">WM</label><br>
+                <label><input type="radio" name="bonus_platform" value="K4">K4</label><br>
+                <label><input type="radio" name="bonus_platform" value="NY">NY</label><br>
+                <label><input type="radio" name="bonus_platform" value="爱豆驿站">爱豆驿站 ->set购买，6专7卡，除6张一套的小卡还会赠一张安宥真小卡</label><br>
+        </div>
+        <div id = "question4" style = "display: none;">
+            <h2>星船特典分为set购买特典以及随机特典，随机特典一般为6随1or12随2/set购买一般需要买一套指定专辑，会给一套卡</h2>
+                <label><input type="radio" name="starship_platform" value="set">set</label><br>
+                <label><input type="radio" name="starship_platform" value="随机">随机</label><br>
+        </div>
+        <div id = "submit-button" style = "display: none;">
+            <input type = "submit" value = "提交">
+        </div>
+
+
+
+
+
+
     
-    <div id="question2" style="display: none;">
-        <h2>问题2：是否需要特定成员的小卡？</h2>
-        <label><input type="radio" name="need_member_card" value="需要"> 需要</label><br>
-        <label><input type="radio" name="need_member_card" value="不需要"> 不需要</label><br>
-    </div>
-
-    <div id="question3" style="display: none;">
-        <h2>问题3：选择特典的平台</h2>
-        <label><input type="radio" name="bonus_platform" value="平台1"> 平台1</label><br>
-        <label><input type="radio" name="bonus_platform" value="平台2"> 平台2</label><br>
-        <label><input type="radio" name="bonus_platform" value="平台3"> 平台3</label><br>
-    </div>
-    <input type="submit" id="submit-button" value="继续" style="display: none;">
-    </div>
-
     <script>
         // 获取问题元素和结果元素
-        const question1 = document.querySelector('#question1');
-        const question2 = document.querySelector('#question2');
-        const question3 = document.querySelector('#question3');
+        const selectionForm = document.getElementById('selection-form')
+        const question1 = document.getElementById('question1')
+        const question2 = document.getElementById('question2')
+        const question3 = document.getElementById('question3')
+        const question4 = document.getElementById('question4')
+        const submitButton = document.getElementById('submit-button');
 
-        // 监听问题1的选择
-        const needBonusInputs = document.querySelectorAll('input[name="need_bonus"]');
-        const submitButton = document.getElementById('submit-button')
-        needBonusInputs.forEach(input => {
-            input.addEventListener('change', () => {
-                if (input.value === '需要') {
-                    question2.style.display = 'block';
-                } else {
-                    question2.style.display = 'none';
-                    question3.style.display = 'none';
-                    submitButton.sytle.display = 'block'
-                }
-            });
+        selectionForm.addEventListener('submit',function (e){
+            e.preventDefault();
+            redirectToResultPage();
         });
 
-        // 监听问题2的选择
-        const needMemberCardInputs = document.querySelectorAll('input[name="need_member_card"]');
-        needMemberCardInputs.forEach(input => {
+        function redirectToResultPage(){
+            const needBonus = document.querySelector('input[name="need_bonus"]:checked').value;
+            const needPL = document.querySelector('input[name="need_PL"]:checked').value;
+            const BonusPlatform = document.querySelector('input[name="bonus_platform"]:checked').value;
+            const StarshitPlatform = document.querySelector('input[name="starship_platform"]:checked').value;
+            const resultPageURL = `result.html?need_bonus=${needBonus}&need_PL=${needPL}&bonus_platform=${BonusPlatform}&starship_platform=${StarshitPlatform}`;
+            window.location.href = resultPageURL;
+        }
+        const needBounusInputs = document.querySelectorAll('input[name="need_bonus"]');
+        const needPLInputs = document.querySelectorAll('input[name="need_PL"]');
+        const BonusPlatformInputs = document.querySelectorAll('input[name="bonus_platform"]');
+        const StarshitPlatformInputs = document.querySelectorAll('input[name="starship_platform"]');
+    
+        needBonusInputs.forEach(input => {
             input.addEventListener('change', () => {
                 if (input.value === '需要') {
                     question3.style.display = 'block';
                 } else {
-                    question3.style.display = 'none';
-                    result.style.display = 'block';
-                    resultText.textContent = '您选择需要特定成员的小卡。';
+                    question2.style.display = 'block';
                 }
             });
         });
 
-        // 监听问题3的选择
-        const bonusPlatformInputs = document.querySelectorAll('input[name="bonus_platform"]');
-        bonusPlatformInputs.forEach(input => {
+        needPLInputs.forEach(input => {
             input.addEventListener('change', () => {
-                result.style.display = 'block';
-                resultText.textContent = `您选择特典的平台是 ${input.value}。`;
+                question3.style.display = 'none';
+                question4.style.display = 'none';
+                submitButton.style.display = 'block';
             });
         });
+
+        BonusPlatformInputs.forEach(input => {
+            input.addEventListener('change', () => {
+                if (input.value === '星船') {
+                    question4.style.display = 'block';
+                } else {
+                    question4.style.display = 'none';
+                    submitButton.style.display = 'block';
+                }
+            });
+        });
+
+        StarshitPlatformInputs.forEach(input => {
+            input.addEventListener('change', () => {
+                submitButton.style.display = 'block';
+            });
+        });
+
+    
     </script>
 </body>
 </html>
