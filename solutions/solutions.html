@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 省略其他头部内容 -->
+</head>
+<body>
+    <h1>方案页面</h1>
+    <div id="solution-content">
+        <!-- 在这里根据用户的选择显示不同的内容 -->
+    </div>
+
+    <script>
+        // 获取URL参数
+        const urlParams = new URLSearchParams(window.location.search);
+        const needBonus = urlParams.get('need_bonus');
+
+        // 获取显示内容的元素
+        const solutionContent = document.getElementById('solution-content');
+
+        if (needBonus === '不需要') {
+            // 如果用户选择不需要特典，在这里显示相关内容
+            solutionContent.innerHTML = '<p>您选择不需要特典。</p>';
+        } else {
+            // 如果用户选择需要特典，显示其他内容
+            solutionContent.innerHTML = '<p>其他相关内容。</p>';
+        }
+    </script>
+</body>
+</html>

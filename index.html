@@ -22,10 +22,7 @@
         <label><input type="radio" name="bonus_platform" value="平台2"> 平台2</label><br>
         <label><input type="radio" name="bonus_platform" value="平台3"> 平台3</label><br>
     </div>
-
-    <div id="result" style="display: none;">
-        <h1>结果：</h1>
-        <p id="result-text">在此显示结果</p>
+    <input type="submit" id="submit-button" value="继续" style="display: none;">
     </div>
 
     <script>
@@ -33,11 +30,10 @@
         const question1 = document.querySelector('#question1');
         const question2 = document.querySelector('#question2');
         const question3 = document.querySelector('#question3');
-        const result = document.querySelector('#result');
-        const resultText = document.querySelector('#result-text');
 
         // 监听问题1的选择
         const needBonusInputs = document.querySelectorAll('input[name="need_bonus"]');
+        const submitButton = document.getElementById('submit-button')
         needBonusInputs.forEach(input => {
             input.addEventListener('change', () => {
                 if (input.value === '需要') {
@@ -45,8 +41,7 @@
                 } else {
                     question2.style.display = 'none';
                     question3.style.display = 'none';
-                    result.style.display = 'block';
-                    resultText.textContent = '您选择不需要特典。';
+                    submitButton.sytle.display = 'block'
                 }
             });
         });
