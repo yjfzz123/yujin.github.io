@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>购专指导</title>
+    <title>小狗导购员为您服务</title>
     <!-- <style>
         .container{
             display:flex;
@@ -47,13 +47,27 @@
     </style> -->
 
     <style>
+
+        .text-image-container{
+            display:flex;
+            align-items:center;
+        }
+        .image_{
+            max-width:100%;
+            height:auto;
+            margin-right:10px;
+            max-height:200px;
+            right:50px;
+        }
+
+
         .colored-word{
             color:red;
         }
         .image_size{
-            max-width: 500px;
-            max-height: 500px;
-            transform:scale(0.5);
+            max-width: 300px;
+            max-height: 300px;
+            /* transform:scale(0.5); */
         }
         .colored-word-blue{
             color:blue;
@@ -61,7 +75,16 @@
     </style>
 </head>
 <body>
-    
+
+        <div class="text-image-container">
+            <img class="image_" src="images/real_puppy.jpg" alt="">
+            <p style="font-size: 20px;"><strong>小安提醒您:<br>
+                买专千万条<br>
+                安全第一条<br>
+                买专不规范<br>
+                小安两行泪</strong></p>
+            
+        </div>
     <!-- <div class = "container"> -->
         <form id = "selection-form">
             <h2>在您买专前，首先可以参考下面版本的配置考虑自己想要的专辑版本(感谢@JIDONGYJ的整理)</h2>
@@ -113,14 +136,6 @@
             <img class="image_size" src ="images/album_index.jpg" alt="专辑配置图">
         </div> -->
     </div>
-
-
-
-
-
-
-
-
 
     <script>
         // 获取问题元素和结果元素

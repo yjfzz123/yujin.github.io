@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>小狗导购员给您的建议</title>
 </head>
 <body>
-    <h1>结果</h1>
+    <h1>小狗导购员给您推荐的途径</h1>
     <div id = "result-content">
         
     </div>
@@ -23,7 +23,7 @@
             if(needPL === '需要'){
                 resultContent.innerHTML = `
                     <p>您的选择是:</p>
-                    <p>${needBonus} 特典 ${needPL} pb无特版orL无特版</p>
+                    <p>${needBonus}特典 ${needPL}pb无特版orL无特版</p>
                     <p>根据您的选择,提供以下购买链接和方法</p>
                     <p> 1.熊宝 </p>
                     <a href="https://shop881578129.v.weidian.com/item.html?itemID=6594390518">熊宝</a>
@@ -37,7 +37,7 @@
             else{
                 resultContent.innerHTML = `
                     <p>您的选择是:</p>
-                    <p>${needBonus}特典 ${needPL} pb无特版orL无特版</p>
+                    <p>${needBonus}特典 ${needPL}pb无特版orL无特版</p>
                     <p>根据您的选择,提供以下购买链接和方法</p>
                     <p> 1.熊宝 </p>
                     <a href="https://shop881578129.v.weidian.com/item.html?itemID=6594390518">熊宝</a>
@@ -58,7 +58,7 @@
                 if (StarshitPlatform ==='set'){
                     resultContent.innerHTML=`
                         <p>您的选择是:</p>
-                        <p>${needBonus}特典,特典平台为 ${bonusPlatform},特典形式为 ${StarshitPlatform} </p>
+                        <p>${needBonus}特典,特典平台为${bonusPlatform},特典形式为 ${StarshitPlatform} </p>
                         <p>根据您的选择,提供以下购买链接和方法</p>
                         <p>1.6+3set版,包含6张一套的单封版本以及3张一套的pb版本,小卡分9张,包括一套6张单人卡和一套3张团卡</p>
                         <p><a href="https://www.yetimall.fun/h5/#/pages/store/goodsDetail/goodsDetail?gid=7693&continueFlag=fd086b40aa10f25ce8683c6343b24a2e">YetiMall </a></p>
@@ -77,7 +77,7 @@
                 }else{
                     resultContent.innerHTML=`
                         <p>您的选择是:</p>
-                        <p>${needBonus}特典,特典平台为 ${bonusPlatform},特典形式为 ${StarshitPlatform} </p>
+                        <p>${needBonus}特典,特典平台为${bonusPlatform},特典形式为${StarshitPlatform} </p>
                         <p>根据您的选择,提供以下购买链接和方法</p>
                         <p>DIGPACK版(单封版):</p>
                         <p>1.可指定安宥真单封，不拆卡为随机特典，买六张可凑齐一套特典</p>
@@ -116,7 +116,7 @@
             }
             else if(bonusPlatform === 'K4'){
                 resultContent.innerHTML=`
-                    <p>${needBonus}特典,特典平台为 ${bonusPlatform}</p>
+                    <p>${needBonus}特典,特典平台为${bonusPlatform}</p>
                     <p>K4特典皆为6随1</p>
                     <p>PB版+L版 4随1</p>
                     <a href="https://cn.ktown4u.com/iteminfo?grp_no=10460817&fanc_goods_no=261264&goods_no=99932"> K4随机</a>
@@ -129,7 +129,7 @@
             }
             else if(bonusPlatform === 'SW'){
                 resultContent.innerHTML=`
-                    <p>${needBonus}特典,特典平台为 ${bonusPlatform}</p>
+                    <p>${needBonus}特典,特典平台为${bonusPlatform}</p>
                     <p>SW特典皆为6随1，专辑为4随1</p>
                     <p><a href="https://www.yetimall.fun/h5/#/pages/store/goodsDetail/goodsDetail?gid=7671&continueFlag=cbfae1f120486ca7f05fd541aa2d3891">YetiMall->SWx1</a></p>
                     <p><a href="https://www.nanyiglobal.com/2309ivepo-1">楠艺->SW特典 </a></p>
@@ -140,7 +140,7 @@
             }
             else if(bonusPlatform ==='WM'){
                 resultContent.innerHTML=`
-                    <p>${needBonus}特典,特典平台为 ${bonusPlatform}</p>
+                    <p>${needBonus}特典,特典平台为${bonusPlatform}</p>
                     <p>WM特典皆为6随1，专辑为4随1</p>
                     <p><a href="https://www.yetimall.fun/h5/#/pages/store/goodsDetail/goodsDetail?gid=7671&continueFlag=cbfae1f120486ca7f05fd541aa2d3891">YetiMall->WMx1</a></p>
                     <p><a href="https://www.nanyiglobal.com/2309ivepo-1">楠艺->WM特典 </a></p>
@@ -151,7 +151,7 @@
             }
             else if(bonusPlatform ==='KAKAO'){
                 resultContent.innerHTML=`
-                    <p>${needBonus}特典,特典平台为 ${bonusPlatform}</p>
+                    <p>${needBonus}特典,特典平台为${bonusPlatform}</p>
                     <p>KAKAO特典皆为6随1，专辑为4随1</p>
                     <p><a href="https://www.yetimall.fun/h5/#/pages/store/goodsDetail/goodsDetail?gid=7671&continueFlag=cbfae1f120486ca7f05fd541aa2d3891">YetiMall->KAKAOx1</a></p>
                     <p><a href="https://www.nanyiglobal.com/2309ivepo-1">楠艺->KAKAO特典 </a></p>
@@ -159,7 +159,7 @@
             }
             else if(bonusPlatform ==='楠艺'){
                 resultContent.innerHTML=`
-                    <p>${needBonus}特典,特典平台为 ${bonusPlatform}</p>
+                    <p>${needBonus}特典,特典平台为${bonusPlatform}</p>
                     <p>楠艺特典皆为6随1，专辑为4随1</p>
                     <p><a href="https://www.nanyiglobal.com/2309ivenypol-1">楠艺低价</a></p>
                     <p><a href="https://www.nanyiglobal.com/2309ivenypo-1">楠艺</a></p>
