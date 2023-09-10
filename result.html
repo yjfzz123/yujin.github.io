@@ -6,10 +6,17 @@
     <title>小狗导购员给您的建议</title>
 </head>
 <body>
+    
     <h1>导购员给您推荐的途径</h1>
+    
+    
+
+
     <div id = "result-content">
         
     </div>
+    <input type = "submit" value = "返回上一页" onclick="goToIndex()">
+    
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const needBonus = urlParams.get('need_bonus');
@@ -19,16 +26,22 @@
 
         const resultContent = document.getElementById('result-content');
 
+        function goToIndex(){
+            window.location.href="index.html"
+        }
+
+
+
         if (needBonus === '不需要'){
             if(needPL === '需要'){
                 resultContent.innerHTML = `
                     <p>您的选择是:</p>
-                    <p>${needBonus}特典 ${needPL}pb无特版orL无特版</p>
+                    <p>${needBonus}特典,${needPL}pb无特版orL无特版</p>
                     <p>根据您的选择,提供以下购买链接和方法</p>
                     <p> 1.熊宝 </p>
-                    <a href="https://shop881578129.v.weidian.com/item.html?itemID=6594390518">熊宝</a>
+                    <p><a href="https://shop881578129.v.weidian.com/item.html?itemID=6594390518">熊宝</a>价格:一般盘随机75r/,D版随机50r/,PLVE版53r/</p>
                     <p> 2.SR </p>
-                    <p><a href="http://m.liveonepick.com/#/?productId=3bb4976050ec46f6900806384f885e9c&continueFlag=fd086b40aa10f25ce8683c6343b24a2e">SR PB+L版 </a></p>
+                    <p><a href="http://m.liveonepick.com/#/?productId=3bb4976050ec46f6900806384f885e9c&continueFlag=fd086b40aa10f25ce8683c6343b24a2e">SR PB+L版 </a>价格:68.5r/</p>
                     <p><a href="http://m.liveonepick.com/#/?productId=d8736ab923d54f92a9ce87147b17ebfa&continueFlag=fd086b40aa10f25ce8683c6343b24a2e">SR D版随机 </a></p>
                     <p><a href="http://m.liveonepick.com/#/?productId=d03289999c0b4a73bfbf930d551417e0&continueFlag=fd086b40aa10f25ce8683c6343b24a2e">SR PLVE版随机 </a></p>
                 
@@ -92,7 +105,7 @@
                         <p>3.拆卡专，指定安宥真星船单封特典卡</p>
                         <p><a href="https://weidian.com/item.html?itemID=6595937370&wfr=c&source=goods_home&ifr=itemdetail&sfr=app">拆卡(指定安宥真船特单封特典)</a></p>
 
-                        <p>4.单封6张set版，小卡为一套星船单封特典小卡</p>
+                        <p>4.单封6张set版,小卡为一套星船单封特典小卡</p>
                         <p><a href="https://shop881578129.v.weidian.com/item.html?itemID=6594390438">熊宝未拆卡->DIGPACK SET(6张)</a></p>
                         <p><a href="https://www.oxbldkr.com/index.php/wap/goods/detail?goods_id=5760&continueFlag=fd086b40aa10f25ce8683c6343b24a2e">偶像便利店->星船特典-凑套6张</a></p>
 
@@ -120,7 +133,7 @@
                     <p>K4特典皆为6随1</p>
                     <p>PB版+L版 4随1</p>
                     <a href="https://cn.ktown4u.com/iteminfo?grp_no=10460817&fanc_goods_no=261264&goods_no=99932"> K4随机</a>
-                    <p>PB版+L版 一套四本，特典卡6随4</p>
+                    <p>PB版+L版 一套四本,特典卡6随4</p>
                     <a href="https://cn.ktown4u.com/iteminfo?grp_no=10460817&fanc_goods_no=261278&goods_no=99936"> K4一套</a>
                     <p>拆卡,指定安宥真K4特典
                     <p><a href="https://cn.ktown4u.com/iteminfo?grp_no=10461130&fanc_goods_no=261415&goods_no=99946"> K4拆卡</a></p>
@@ -130,10 +143,10 @@
             else if(bonusPlatform === 'SW'){
                 resultContent.innerHTML=`
                     <p>${needBonus}特典,特典平台为${bonusPlatform}</p>
-                    <p>SW特典皆为6随1，专辑为4随1</p>
+                    <p>SW特典皆为6随1,专辑为4随1</p>
                     <p><a href="https://www.yetimall.fun/h5/#/pages/store/goodsDetail/goodsDetail?gid=7671&continueFlag=cbfae1f120486ca7f05fd541aa2d3891">YetiMall->SWx1</a></p>
                     <p><a href="https://www.nanyiglobal.com/2309ivepo-1">楠艺->SW特典 </a></p>
-                    <p><a href="https://shop881578129.v.weidian.com/item.html?itemID=6594390518">熊宝->SW预售特典->一般盘</a></p>
+                    <p><a href="https://shop881578129.v.weidian.com/item.html?itemID=6594390518">熊宝->SW预售特典->一般盘</a>价格:80r/</p>
                     <p><a href="https://shop1723959802.v.weidian.com/item.html?itemID=6593456939">爱豆驿站->SW特典 </a></p>
                     <p><a href="https://www.oxbldkr.com/index.php/wap/goods/detail?goods_id=5717&continueFlag=cbfae1f120486ca7f05fd541aa2d3891">偶像便利店->PB-SW特典-随机1张</a></p>
                     `;
@@ -141,7 +154,7 @@
             else if(bonusPlatform ==='WM'){
                 resultContent.innerHTML=`
                     <p>${needBonus}特典,特典平台为${bonusPlatform}</p>
-                    <p>WM特典皆为6随1，专辑为4随1</p>
+                    <p>WM特典皆为6随1,专辑为4随1</p>
                     <p><a href="https://www.yetimall.fun/h5/#/pages/store/goodsDetail/goodsDetail?gid=7671&continueFlag=cbfae1f120486ca7f05fd541aa2d3891">YetiMall->WMx1</a></p>
                     <p><a href="https://www.nanyiglobal.com/2309ivepo-1">楠艺->WM特典 </a></p>
                     <p><a href="https://shop1723959802.v.weidian.com/item.html?itemID=6593456939">爱豆驿站->WM特典 </a></p>
@@ -152,7 +165,7 @@
             else if(bonusPlatform ==='KAKAO'){
                 resultContent.innerHTML=`
                     <p>${needBonus}特典,特典平台为${bonusPlatform}</p>
-                    <p>KAKAO特典皆为6随1，专辑为4随1</p>
+                    <p>KAKAO特典皆为6随1,专辑为4随1</p>
                     <p><a href="https://www.yetimall.fun/h5/#/pages/store/goodsDetail/goodsDetail?gid=7671&continueFlag=cbfae1f120486ca7f05fd541aa2d3891">YetiMall->KAKAOx1</a></p>
                     <p><a href="https://www.nanyiglobal.com/2309ivepo-1">楠艺->KAKAO特典 </a></p>
                     `;
@@ -160,7 +173,7 @@
             else if(bonusPlatform ==='楠艺'){
                 resultContent.innerHTML=`
                     <p>${needBonus}特典,特典平台为${bonusPlatform}</p>
-                    <p>楠艺特典皆为6随1，专辑为4随1</p>
+                    <p>楠艺特典皆为6随1,专辑为4随1</p>
                     <p><a href="https://www.nanyiglobal.com/2309ivenypol-1">楠艺低价</a></p>
                     <p><a href="https://www.nanyiglobal.com/2309ivenypo-1">楠艺</a></p>
                     `;
