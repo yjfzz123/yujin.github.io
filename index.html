@@ -55,6 +55,9 @@
             max-height: 500px;
             transform:scale(0.5);
         }
+        .colored-word-blue{
+            color:blue;
+        }
     </style>
 </head>
 <body>
@@ -62,28 +65,28 @@
     <!-- <div class = "container"> -->
         <form id = "selection-form">
             <h2>在您买专前，首先可以参考下面版本的配置考虑自己想要的专辑版本(感谢@JIDONGYJ的整理)</h2>
-            <h2>所有配置都是以问号形式预览存在</h2>
+            <p> <strong><span class ="colored-word-blue">所有配置都是以问号形式预览存在</span></strong></p>
             <p> <span class="colored-word">PB版</span>共<strong>3</strong>版本，配置为PB+CD+<strong>小卡6随1</strong>，<strong>预售礼</strong>:<strong>明信片6随1</strong>、<strong>贴纸6随1</strong></p>
             <p> <span class="colored-word">LOVED IVE版(L版)</span>共<strong>1</strong>版本，配置为PB+CD+<strong>小卡6随1</strong>，<strong>预售礼</strong>:<strong>海报6随1</strong>、<strong>拍立得6随1</strong></p>
             <p> <span class="colored-word">DIGIPACK版(D版)</span>共<strong>6</strong>版本，为<strong>单封</strong>版本，配置为小PB+CD+<strong>小卡6随1</strong>+<strong>小海报6随1</strong>
             <p> <span class="colored-word">PLVE版(P版)</span>共<strong>1</strong>版本<strong>电子专</strong>，配置为<strong>QR卡</strong>+<strong>小卡6随1</strong></p>
             <h2>请选择您的需求</h2>
             <div id ="question1">
-                <p>是否需要特典？</p>
+                <h3>是否需要特典？</h3>
                 <label><input type="radio" name="need_bonus" value="需要"> 需要</label><br>
                 <label><input type="radio" name="need_bonus" value="不需要"> 不需要</label><br>
             </div>
 
 
             <div id = "question2" style="display: none;">
-                <p>不需要特典的情况下，需不需要PB版(普通版)/LOVEDIVE版无特典专辑</p>
+                <h3>不需要特典的情况下，需不需要PB版(普通版)/LOVEDIVE版无特典专辑</h3>
                     <label><input type="radio" name="need_PL" value="需要"> 需要</label><br>
                     <label><input type="radio" name="need_PL" value="不需要"> 不需要</label><br>
             </div>
 
             <div id = "question3" style = "display: none;">
-                <p>选择哪个平台的特典<p>
-                <p>(除星船特外其余平台特典都为购买PB版+L版赠送，专辑均为四版本随机一版，set购买会出现除四版本一套外的两张随机版本专辑)</p>
+                <h3>选择哪个平台的特典<span class = "colored-word-blue">(除星船特外其余平台特典都为购买PB版+L版赠送，专辑均为四版本随机一版)</span></h3>
+                
                     <label><input type="radio" name="bonus_platform" value="星船">星船</label><br>
                     <label><input type="radio" name="bonus_platform" value="KAKAO">KAKAO</label><br>
                     <label><input type="radio" name="bonus_platform" value="SW">SW</label><br>
@@ -95,7 +98,7 @@
             
                 </div>
             <div id = "question4" style = "display: none;">
-                <p>星船特典分为set购买特典以及随机特典，随机特典一般为6随1or12随2/set购买一般需要买一套指定专辑，会给一套卡</p>
+                <h3>星船特典分为set购买特典以及随机特典，随机特典一般为6随1or12随2/set购买一般需要买一套指定专辑，会给一套卡</h3>
                     <label><input type="radio" name="starship_platform" value="set">set</label><br>
                     <label><input type="radio" name="starship_platform" value="随机">随机</label><br>
             </div>
